@@ -19,7 +19,9 @@
 .text-light-gray{
     color: #727272;
 }
-
+.text-primary{
+    color: #FF900E;
+}
 .bd-light{
     background-color: rgba(255, 144, 14, 0.1);
 }
@@ -31,6 +33,19 @@
     font-size: 1.25rem;
     font-size: 600;
     border: none;
+}
+
+main{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main>section{
+    margin-top: 130px;
+}
+
+.section-title{
+    font-size: 2.8rem;
+    font-weight: 700;
 }
 /* Header style */
 
@@ -45,6 +60,7 @@
 }
 .nav-item{
     list-style: none;
+    margin-right: 30px;
 }
 .nav-link{
     text-decoration: none;
@@ -54,6 +70,7 @@
     max-width: 1440px;
     margin: 0 auto;
 }
+
 
 /* banner style */
 
@@ -72,9 +89,181 @@
     width: 100%;
 }
 
+/* team and frature style */
+.team{
+    align-items: center;
+}
+.team-img-cont{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 24px;
+}
+.our-feature{
+    margin-left: 130px;
+    max-width: 530px;
+}
+.section-title{
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+#quick-list{
+    font-weight: 500;
+}
+
+/* features section style */
+.features{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 100px;
+}
+#features-section-title{
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+.feature-card{
+    padding: 30px;
+    box-shadow: 0 4px 30px 0 rgba(0,0,0,0.06);
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+.feature-card .feature-card-title{
+    font-weight: 600px;
+    font-size: 1.25rem;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+#expreience-bedge{
+    padding: 45px 42px;
+    font-size:1.25rem;
+    font-weight: 500;
+    margin-left: -90px;
+    margin-top: -80px;
+}
+#Expreience-year{
+    font-size: 4rem;
+    font-weight: 700;
+}
+.feature-img img{
+    width: 100%;
+}
+
+
+/* fact-card style */
+.fact-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.fact-card{
+    border: 2px solid #FF900E;
+    height: 240px;
+    width: 240px;
+    border-radius: 8px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.fact-num{
+    font-size: 2.8rem;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+.fact-name{
+    font-size: 1.25rem;
+    font-weight: 600px;
+    color: #727272;
+    margin-top: 10px;
+}
+.fact-dis{
+    max-width: 540px;
+}
+
+/* sponsors style */
+.sponsors-info{
+    max-width: 540px;
+    margin: 50px auto;
+    text-align: center;
+}
+.sponsors-company{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+
+/* footer */
+.footer{
+    width: 1440px;
+    height: 70px;
+    background-color:#FFF4E7;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px 100px 220px;
+    
+}
+
 /* responsive-media query */
 @media screen and (max-width:576px){
-    .navber,.nav-links{
+    .navber,
+    .nav-links,
+    .team{
         flex-direction: column;
+    }
+    .team-img-cont ,
+    .fact-container,
+    .sponsors-company,
+    .features
+    {
+        grid-template-columns: repeat(1,1fr);
+    }
+    .fact-container{
+        justify-items: center;
+        gap: 24px;
+    }
+    .our-feature{
+        margin-left: 20px;
+    }
+    .sponsors-company{
+        justify-items: center;
+        gap: 50px;
+    }
+    #expreience-bedge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .footer{
+        width: 100%;
+        margin: 30px auto;
+        text-align: center;
+    }
+
+}
+
+/* mediam device */
+@media screen and (min-width:576px) and (max-width:992px) {
+    .team{
+        flex-direction: column;
+    }
+    .our-feature{
+        margin-left: 50px auto;
+    }
+    .sponsors-company{
+        grid-template-columns: repeat(3,1fr);
+        gap: 50px;
+    }
+    .fact-container{
+        grid-template-columns: repeat(2,1fr);
+        gap: 50px;
+        justify-items: center;
+    }
+    #expreience-bedge{
+        margin-top: 20px;
+        margin-left: 20px;
+    }
+    .features{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .footer{
+        width: 100%;
+        margin: 30px auto;
     }
 }
